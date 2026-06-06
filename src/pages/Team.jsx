@@ -6,104 +6,111 @@ import HoverCard from '../components/HoverCard.jsx';
 export default function Team() {
   const [selectedYear, setSelectedYear] = useState('DECODE');
 
+  // Coaches data (stays persistent across seasons)
+  const coachesData = [
+    {
+      name: 'Aaron Lockhart',
+      role: 'Head Coach',
+      image: 'src/assets/teamPhotos/Aaron.jpg',
+    },
+    {
+      name: 'Chris Higginson',
+      role: 'Coach & Technical Advisor',
+      image: 'src/assets/teamPhotos/Chris.jpg',
+    },
+  ];
+
   // Added 'image' property to each member object
   const rosterData = {
     DECODE: [
       {
         name: 'Miles Higginson',
         role: 'Lead Software',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Carl_von_Linn%C3%A9.png/1920px-Carl_von_Linn%C3%A9.png',
+        image: 'src/assets/teamPhotos/Miles.jpg',
       },
       {
         name: 'Ryan Davis',
         role: 'Lead Mechanical',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Carl_von_Linn%C3%A9.png/1920px-Carl_von_Linn%C3%A9.png',
+        image: 'src/assets/teamPhotos/Ryan.jpg',
       },
       {
         name: 'Ethan Lockhart',
         role: 'CAD & Outreach',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Carl_von_Linn%C3%A9.png/1920px-Carl_von_Linn%C3%A9.png',
+        image: 'src/assets/teamPhotos/Ethan.jpg',
       },
       {
         name: 'Lewis Higginson',
         role: 'Build Team & Portfolio',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Carl_von_Linn%C3%A9.png/1920px-Carl_von_Linn%C3%A9.png',
+        image: 'src/assets/teamPhotos/Lewis.jpg',
       },
       {
         name: 'Anna Auman',
         role: 'Outreach & Pit',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Carl_von_Linn%C3%A9.png/1920px-Carl_von_Linn%C3%A9.png',
+        image: 'src/assets/teamPhotos/Anna.jpg',
       },
       {
         name: 'Sam Haney',
         role: 'Build Team',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Carl_von_Linn%C3%A9.png/1920px-Carl_von_Linn%C3%A9.png',
+        image: 'src/assets/teamPhotos/Sam.jpg',
       },
       {
         name: 'Flash Auman',
         role: 'Build Team',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Carl_von_Linn%C3%A9.png/1920px-Carl_von_Linn%C3%A9.png',
+        image: 'src/assets/teamPhotos/Flash.jpg',
       },
     ],
     INDEEP: [
       {
         name: 'Miles Higginson',
         role: 'Lead Software',
-        image: 'https://via.placeholder.com/300x400',
+        image: 'src/assets/teamPhotos/Miles.jpg',
       },
       {
         name: 'Ryan Davis',
         role: 'Lead Mechanical',
-        image: 'https://via.placeholder.com/300x400',
+        image: 'src/assets/teamPhotos/Ryan.jpg',
       },
       {
         name: 'Ethan Lockhart',
         role: 'CAD & Outreach',
-        image: 'https://via.placeholder.com/300x400',
+        image: 'src/assets/teamPhotos/Ethan.jpg',
       },
       {
         name: 'Lewis Higginson',
         role: 'Build Team',
-        image: 'https://via.placeholder.com/300x400',
+        image: 'src/assets/teamPhotos/Lewis.jpg',
       },
       {
         name: 'Flash Auman',
         role: 'Build Team',
-        image: 'https://via.placeholder.com/300x400',
+        image: 'src/assets/teamPhotos/Flash.jpg',
       },
     ],
     STAGE: [
       {
         name: 'Miles Higginson',
         role: 'Lead Software',
-        image: 'https://via.placeholder.com/300x400',
+        image: 'src/assets/teamPhotos/Miles.jpg',
       },
       {
         name: 'Ryan Davis',
         role: 'Lead Mechanical',
-        image: 'https://via.placeholder.com/300x400',
+        image: 'src/assets/teamPhotos/Ryan.jpg',
       },
       {
         name: 'Ethan Lockhart',
         role: 'CAD & Outreach',
-        image: 'https://via.placeholder.com/300x400',
+        image: 'src/assets/teamPhotos/Ethan.jpg',
       },
       {
         name: 'Flash Auman',
         role: 'Build Team',
-        image: 'https://via.placeholder.com/300x400',
+        image: 'src/assets/teamPhotos/Flash.jpg',
       },
       {
         name: 'Lewis Higginson',
         role: 'Build Team',
-        image: 'https://via.placeholder.com/300x400',
+        image: 'src/assets/teamPhotos/Lewis.jpg',
       },
     ],
     POWERPLAY: [],
@@ -111,8 +118,15 @@ export default function Team() {
     SKYSTONE: [],
   };
 
+  const gridStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
+    gap: '25px',
+  };
+
   return (
     <section style={globalStyles.section}>
+      {/* Student Roster Section */}
       <div style={globalStyles.sectionTitle}>Crew Roster</div>
 
       <select
@@ -125,19 +139,29 @@ export default function Team() {
         <option value="STAGE">CENTERSTAGE</option>
       </select>
 
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
-          gap: '25px',
-        }}
-      >
-        {rosterData[selectedYear].map((member, index) => (
+      <div style={gridStyle}>
+        {rosterData[selectedYear] && rosterData[selectedYear].map((member, index) => (
           <HoverCard
             key={index}
             cardTitle={member.name}
             description={member.role}
             image={member.image}
+          />
+        ))}
+      </div>
+
+      {/* Coaches & Mentors Section */}
+      <div style={{ ...globalStyles.sectionTitle, marginTop: '50px' }}>
+        Coaches & Mentors
+      </div>
+      
+      <div style={gridStyle}>
+        {coachesData.map((coach, index) => (
+          <HoverCard
+            key={index}
+            cardTitle={coach.name}
+            description={coach.role}
+            image={coach.image}
           />
         ))}
       </div>
