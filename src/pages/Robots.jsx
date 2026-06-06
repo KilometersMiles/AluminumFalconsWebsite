@@ -9,16 +9,16 @@ export default function Robots() {
     DECODE: {
       name: 'KEVIN SENIOR',
       image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/FANUC_6-axis_welding_robots.jpg/500px-FANUC_6-axis_welding_robots.jpg', // Placeholder for Robot photo
+        'src/assets/robotPhotos/neobot.png',
       drive: '4x Gobilda 435 RPM / 3D Printed',
       weight: '14.2 lbs',
       features:
-        'Modular & Fully 3D printed. Turret Tracking. Limelight & Pinpoint localization. High speed spindexer',
+        'Modular & Fully 3D printed. Turret Tracking. Limelight & Pinpoint localization. High speed ramped spindexer',
     },
     INDEEP: {
       name: 'KEVIN',
       image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/HONDA_ASIMO.jpg/500px-HONDA_ASIMO.jpg', // Placeholder for Robot photo
+        'src/assets/robotPhotos/intothedeepkevin.png',
       drive: '4x Gobilda Yellow Jacket 435 RPM / GoBilda U-Channel',
       weight: '7093 lbs',
       features: 'Dual Viper Slides. Grate Transfer. Rubber Band Claw.',

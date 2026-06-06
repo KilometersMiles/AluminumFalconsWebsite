@@ -42,8 +42,8 @@ export default function FLL({ navigate }) {
           {/* Image Container */}
           <div style={{ flex: '1', minWidth: '300px' }}>
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/First_Lego_League_2018_%2839253072084%29.jpg/1280px-First_Lego_League_2018_%2839253072084%29.jpg"
-              alt="FLL Team in Action"
+              src="src/assets/teamPhotos/LegoLeagueTeam2026.JPG"
+              alt="FLL Team 2026"
               style={{
                 width: '100%',
                 borderRadius: '20px',
