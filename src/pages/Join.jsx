@@ -143,6 +143,7 @@ export default function Join() {
               <li>Weekly FLL Mentorship Sessions</li>
               <li>Spike Prime robot building and training</li>
               <li>Innovation Project & Teamwork</li>
+              <li>All kids 5th-8th grade eligible</li>
             </ul>
           </div>
           <form
