@@ -42,7 +42,7 @@ export default function FLL({ navigate }) {
           {/* Image Container */}
           <div style={{ flex: '1', minWidth: '300px' }}>
             <img
-              src="public/photos/teamPhotos/LegoLeagueTeam2026.JPG"
+              src="photos/teamPhotos/LegoLeagueTeam2026.JPG"
               alt="FLL Team 2026"
               style={{
                 width: '100%',

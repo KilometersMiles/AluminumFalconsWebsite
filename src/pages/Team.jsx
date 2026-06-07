@@ -11,12 +11,12 @@ export default function Team() {
     {
       name: 'Aaron Lockhart',
       role: 'Head Coach',
-      image: 'public/photos/teamPhotos/Aaron.jpg',
+      image: 'photos/teamPhotos/Aaron.jpg',
     },
     {
       name: 'Chris Higginson',
       role: 'Coach & Technical Advisor',
-      image: 'public/photos/teamPhotos/Chris.jpg',
+      image: 'photos/teamPhotos/Chris.jpg',
     },
   ];
 
@@ -26,91 +26,91 @@ export default function Team() {
       {
         name: 'Miles Higginson',
         role: 'Lead Software',
-        image: 'public/photos/teamPhotos/Miles.jpg',
+        image: 'photos/teamPhotos/Miles.jpg',
       },
       {
         name: 'Ryan Davis',
         role: 'Lead Mechanical',
-        image: 'public/photos/teamPhotos/Ryan.jpg',
+        image: 'photos/teamPhotos/Ryan.jpg',
       },
       {
         name: 'Ethan Lockhart',
         role: 'CAD & Outreach',
-        image: 'public/photos/teamPhotos/Ethan.jpg',
+        image: 'photos/teamPhotos/Ethan.jpg',
       },
       {
         name: 'Lewis Higginson',
         role: 'Build Team & Portfolio',
-        image: 'public/photos/teamPhotos/Lewis.jpg',
+        image: 'photos/teamPhotos/Lewis.jpg',
       },
       {
         name: 'Anna Auman',
         role: 'Outreach & Pit',
-        image: 'public/photos/teamPhotos/Anna.jpg',
+        image: 'photos/teamPhotos/Anna.jpg',
       },
       {
         name: 'Sam Haney',
         role: 'Build Team',
-        image: 'public/photos/teamPhotos/Sam.jpg',
+        image: 'photos/teamPhotos/Sam.jpg',
       },
       {
         name: 'Flash Auman',
         role: 'Build Team',
-        image: 'public/photos/teamPhotos/Flash.jpg',
+        image: 'photos/teamPhotos/Flash.jpg',
       },
     ],
     INDEEP: [
       {
         name: 'Miles Higginson',
         role: 'Lead Software',
-        image: 'public/photos/teamPhotos/Miles.jpg',
+        image: 'photos/teamPhotos/Miles.jpg',
       },
       {
         name: 'Ryan Davis',
         role: 'Lead Mechanical',
-        image: 'public/photos/teamPhotos/Ryan.jpg',
+        image: 'photos/teamPhotos/Ryan.jpg',
       },
       {
         name: 'Ethan Lockhart',
         role: 'CAD & Outreach',
-        image: 'public/photos/teamPhotos/Ethan.jpg',
+        image: 'photos/teamPhotos/Ethan.jpg',
       },
       {
         name: 'Lewis Higginson',
         role: 'Build Team',
-        image: 'public/photos/teamPhotos/Lewis.jpg',
+        image: 'photos/teamPhotos/Lewis.jpg',
       },
       {
         name: 'Flash Auman',
         role: 'Build Team',
-        image: 'public/photos/teamPhotos/Flash.jpg',
+        image: 'photos/teamPhotos/Flash.jpg',
       },
     ],
     STAGE: [
       {
         name: 'Miles Higginson',
         role: 'Lead Software',
-        image: 'public/photos/teamPhotos/Miles.jpg',
+        image: 'photos/teamPhotos/Miles.jpg',
       },
       {
         name: 'Ryan Davis',
         role: 'Lead Mechanical',
-        image: 'public/photos/teamPhotos/Ryan.jpg',
+        image: 'photos/teamPhotos/Ryan.jpg',
       },
       {
         name: 'Ethan Lockhart',
         role: 'CAD & Outreach',
-        image: 'public/photos/teamPhotos/Ethan.jpg',
+        image: 'photos/teamPhotos/Ethan.jpg',
       },
       {
         name: 'Flash Auman',
         role: 'Build Team',
-        image: 'public/photos/teamPhotos/Flash.jpg',
+        image: 'photos/teamPhotos/Flash.jpg',
       },
       {
         name: 'Lewis Higginson',
         role: 'Build Team',
-        image: 'public/photos/teamPhotos/Lewis.jpg',
+        image: 'photos/teamPhotos/Lewis.jpg',
       },
     ],
     POWERPLAY: [],
