@@ -9,7 +9,7 @@ export default function Robots() {
     DECODE: {
       name: 'KEVIN SENIOR',
       image:
-        'src/assets/robotPhotos/neobot.png',
+        'public/photos/robotPhotos/neobot.png',
       drive: '4x Gobilda 435 RPM / 3D Printed',
       weight: '14.2 lbs',
       features:
@@ -18,9 +18,9 @@ export default function Robots() {
     INDEEP: {
       name: 'KEVIN',
       image:
-        'src/assets/robotPhotos/intothedeepkevin.png',
+        'public/photos/robotPhotos/intothedeepkevin.png',
       drive: '4x Gobilda Yellow Jacket 435 RPM / GoBilda U-Channel',
-      weight: '7093 lbs',
+      weight: '20 lbs',
       features: 'Dual Viper Slides. Grate Transfer. Rubber Band Claw.',
     },
   };
