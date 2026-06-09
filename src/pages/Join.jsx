@@ -48,8 +48,8 @@ export default function Join() {
             color: themeColors.textMuted,
           }}
         >
-          Looking for dedicated developers, CAD modelers, mechanical builders,
-          and strategic thinkers. Initialize your application below.
+          Looking for developers, CAD modelers, mechanical builders, and business aspirants.
+          Start your application below.
         </p>
         <form
           action="https://send.pageclip.co/uYd97f2cgVUNsWJO2b7J0uTwPcjEvP4a/application_form"
@@ -61,14 +61,14 @@ export default function Join() {
           <input
             name="name"
             type="text"
-            placeholder="APPLICANT FULL NAME"
+            placeholder="FULL NAME"
             style={inputStyle}
             required
           />
           <input
             name="email"
             type="email"
-            placeholder="COMMUNICATION CHANNELS (EMAIL)"
+            placeholder="EMAIL"
             style={inputStyle}
             required
           />
@@ -76,14 +76,14 @@ export default function Join() {
             <option value="" disabled>
               SELECT PREFERRED SECTOR
             </option>
-            <option value="software">Software Division</option>
+            <option value="software">Software Development</option>
             <option value="mechanical">Mechanical Design</option>
-            <option value="business">Operations & Strategy</option>
+            <option value="business">Outreach & Marketing</option>
             <option value="fll-mentor">FLL Mentorship</option>
           </select>
           <textarea
             name="message"
-            placeholder="STATEMENT OF ROBOTICS INTEREST"
+            placeholder="WHY ARE YOU INTERESTED IN JOINING THE TEAM?"
             style={{ ...inputStyle, minHeight: '120px', resize: 'vertical' }}
             required
           ></textarea>
@@ -157,20 +157,20 @@ export default function Join() {
             <input
               name="name"
               type="text"
-              placeholder="APPLICANT FULL NAME"
+              placeholder="FULL NAME"
               style={inputStyle}
               required
             />
             <input
               name="email"
               type="email"
-              placeholder="COMMUNICATION CHANNELS (EMAIL)"
+              placeholder="EMAIL"
               style={inputStyle}
               required
             />
             <textarea
               name="message"
-              placeholder="INTEREST"
+              placeholder="WHY ARE YOU INTERESTED IN JOINING THE TEAM?"
               style={{ ...inputStyle, minHeight: '120px', resize: 'vertical' }}
               required
             ></textarea>
