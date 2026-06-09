@@ -305,7 +305,7 @@ export default function Home({ navigate }) {
             marginBottom: '40px',
           }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          By teaching and learning about STEM we will extend our reach to the stars above. 
         </div>
         <div style={pageStyles.statsContainer}>
           <div style={pageStyles.statBox}>
@@ -407,19 +407,19 @@ export default function Home({ navigate }) {
         </div>
       </section>
       <section style={globalStyles.section}>
-        <div style={globalStyles.sectionTitle}>Engineering Philosophy</div>
+        <div style={globalStyles.sectionTitle}>Our Principles</div>
         <div style={pageStyles.grid3}>
           <HoverCard
-            cardTitle="Gracious Professionalism"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            cardTitle="Learn"
+            description="FTC allows us to learn about engineering, programming, and design in a hands-on way. We also learn important life skills like teamwork, communication, and problem-solving."
           />
           <HoverCard
-            cardTitle="Something else"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            cardTitle="Share"
+            description="Each year, we organize STEM Nights at local elementary schools to share our cool robot and our excitment for STEM. They are inspired to become more involved in STEM."
           />
           <HoverCard
-            cardTitle="Iterative Design"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            cardTitle="Mentor"
+            description="Our team organizes and mentors a FIRST LEGO League team for 4th-8th graders called the LEGO Vaders. We help them learn the basics of robotics and programming, and we hope to inspire them to join FTC in the future."
           />
         </div>
       </section>

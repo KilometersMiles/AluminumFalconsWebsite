@@ -74,8 +74,7 @@ export default function FLL({ navigate }) {
               }}
             >
               Our lego league team, the LEGO Vaders, introduces younger students
-              to real-world engineering challenges through LEGO Spike Prime and
-              EV3 technology. Our program focuses not just on building robots,
+              to real-world engineering challenges through LEGO Spike Prime robots. Our program focuses not just on building robots,
               but on developing the{' '}
               <strong>
                 Core Values of teamwork, discovery, and inclusion.
@@ -84,13 +83,13 @@ export default function FLL({ navigate }) {
 
             <div style={{ marginTop: '30px', display: 'flex', gap: '15px' }}>
               <HoverCard
-                cardTitle="01"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                cardTitle="Robot Game"
+                description="Students work together to design, build, and program a robot to LEGO challenges."
                 color="#FF0000"
               />
               <HoverCard
-                cardTitle="02"
-                description="sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+                cardTitle="Innovation Project"
+                description="Students research and develop a solution to a real-world problem, develop a prototype, and present their findings."
                 color="#FF0000"
               />
             </div>
