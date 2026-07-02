@@ -4,7 +4,6 @@ import { themeColors } from '../styles';
 export default function LightningText({ children, onClick, style }) {
   const [isHovered, setIsHovered] = useState(false);
 
-  // Unique ID for the filter so multiple buttons on the same page don't clash
   const filterId = 'plasma-glow-' + Math.random().toString(36).substr(2, 9);
   const electricRed = '#FF0000';
 
@@ -18,7 +17,6 @@ export default function LightningText({ children, onClick, style }) {
     // }`,
     backdropFilter: 'blur(8px)',
     padding: '12px 32px',
-    // borderRadius: '100px', // Keeps your sharp, clean-cut geometry aesthetic
     color: '#00000000',
     cursor: 'pointer',
     textTransform: 'uppercase',
@@ -26,10 +24,10 @@ export default function LightningText({ children, onClick, style }) {
     fontWeight: '800',
     letterSpacing: '-0.03em',
     outline: 'none',
-    overflow: 'visible', // Essential so the plasma arcs can break outside the bounding box
+    overflow: 'visible', 
     transition: 'all 0.3s ease',
     zIndex: 2,
-    ...style, // Allows overriding structural styles if needed
+    ...style,
   };
 
   const lightningLayerStyle = {
@@ -60,7 +58,6 @@ export default function LightningText({ children, onClick, style }) {
 
   return (
     <>
-      {/* Dynamic SVG Distortion Filter */}
       <svg
         style={{
           position: 'absolute',

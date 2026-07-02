@@ -17,7 +17,7 @@ import Hyperspace from './components/Hyperspace';
 export default function App() {
   const [hasJumped, setHasJumped] = useState(false);
   const [currentPage, setCurrentPage] = useState('home');
-  const [displayedPage, setDisplayedPage] = useState('home'); // Tracks page currently rendering
+  const [displayedPage, setDisplayedPage] = useState('home'); 
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
@@ -27,18 +27,16 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Intercept routing calls to inject the transition animation
   const navigateWithTransition = (nextPage) => {
     if (nextPage === currentPage) return;
 
-    setIsTransitioning(true); // Start fade out
+    setIsTransitioning(true); 
     setCurrentPage(nextPage);
 
-    // Wait for fade-out animation to complete (300ms) before swapping content
     setTimeout(() => {
       setDisplayedPage(nextPage);
       window.scrollTo(0, 0);
-      setIsTransitioning(false); // Start fade in
+      setIsTransitioning(false); 
     }, 300);
   };
 
@@ -61,15 +59,14 @@ export default function App() {
     }
   };
 
-  // Generate a robust, randomized starfield background string once on load
   const randomStarfieldBackground = useMemo(() => {
-    const starCount = 35; // Total unique stars per canvas block
-    const canvasSize = 600; // Increase tile grid to 600px so repeats are unnoticeable
-    const colors = ['#fff', '#eee', '#7f8c8d', '#e0f7fa', '#ffe0b2']; // Adding slight hue variations
+    const starCount = 35; 
+    const canvasSize = 600; 
+    const colors = ['#fff', '#eee', '#7f8c8d', '#e0f7fa', '#ffe0b2']; 
     const gradients = [];
 
     for (let i = 0; i < starCount; i++) {
-      const size = Math.random() > 0.85 ? '2px 2px' : '1px 1px'; // Mix of tiny stars and slightly larger ones
+      const size = Math.random() > 0.85 ? '2px 2px' : '1px 1px'; 
       const x = Math.floor(Math.random() * canvasSize);
       const y = Math.floor(Math.random() * canvasSize);
       const color = colors[Math.floor(Math.random() * colors.length)];
@@ -85,7 +82,6 @@ export default function App() {
     };
   }, []);
 
-  // Starfield dynamic Parallax style
   const starFieldStyle = {
     position: 'fixed',
     top: 0,
@@ -93,13 +89,12 @@ export default function App() {
     width: '100%',
     height: '100%',
     pointerEvents: 'none',
-    ...randomStarfieldBackground, // Injects randomized gradient styles
+    ...randomStarfieldBackground, 
     opacity: 0.8,
     transform: `translateY(${scrollY * -0.15}px)`,
     zIndex: 0,
   };
 
-  // Cinematic page container transition configuration
   const pageTransitionStyle = {
     transition:
       'opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), transform 0.3s cubic-bezier(0.25, 1, 0.5, 1)',
@@ -109,7 +104,6 @@ export default function App() {
 
   return (
     <div style={globalStyles.container}>
-      {/* Only show Hyperspace if jump isn't complete */}
       {!hasJumped && <Hyperspace onComplete={() => setHasJumped(true)} />}
       <div style={globalStyles.glowEffect} />
       <div style={starFieldStyle} />

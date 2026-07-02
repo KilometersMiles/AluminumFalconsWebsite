@@ -176,10 +176,8 @@ export default function Home({ navigate }) {
   };
 
   const canvasRef = useRef(null);
-  // Track pointer snapshot locations [x, y]
   const pointerInteractionRef = useRef(null);
 
-  // Initialize react-spring physics for both x (r[0]) and y (r[1])
   const [{ r }, api] = useSpring(() => ({
     r: [0, 0],
     config: {
@@ -236,7 +234,7 @@ export default function Home({ navigate }) {
       height: width * 2,
       phi: 0,
       theta: 0.2,
-      dark: 1, // Changed to 1 if your theme is dark, change back to 0 if light
+      dark: 1,
       diffuse: 1.2,
       mapSamples: 4000,
       mapBrightness: 6,
@@ -278,7 +276,6 @@ export default function Home({ navigate }) {
         <h1 style={pageStyles.heroTitle}>ALUMINUM FALCONS</h1>
         <p style={pageStyles.heroSubtitle}>FTC Robotics Team</p>
         <LightningButton
-          //style={globalStyles.btn}
           onClick={() => navigate('join')}
           onMouseEnter={(e) => {
             e.target.style.background = '#000';
@@ -335,7 +332,7 @@ export default function Home({ navigate }) {
           <div
             class="left"
             style={{
-              maxWidth: '40%', // Ensures it never exceeds half the parent container
+              maxWidth: '40%', 
             }}
           >
             <HoverCard
@@ -348,7 +345,7 @@ export default function Home({ navigate }) {
             class="right"
             style={{
               width: '100%',
-              maxWidth: '60%', // Ensures it never exceeds half the parent container
+              maxWidth: '60%',
               aspectRatio: '1/1',
               position: 'relative',
               display: 'flex',
@@ -436,7 +433,6 @@ export default function Home({ navigate }) {
             groups.forEach((g) => (g.style.animationPlayState = 'running'));
           }}
         >
-          {/* Double mapped to ensure an infinite seamless wrapping animation loop */}
           {[1, 2].map((loopIdx) => (
             <div
               key={loopIdx}
@@ -457,7 +453,7 @@ export default function Home({ navigate }) {
                     alt={sponsor.name}
                     style={{
                       ...pageStyles.sponsorLogo,
-                      maxHeight: '40px', // Standardizes layout boundaries across different aspect ratios
+                      maxHeight: '40px',
                       maxWidth: '160px',
                       objectFit: 'contain',
                     }}

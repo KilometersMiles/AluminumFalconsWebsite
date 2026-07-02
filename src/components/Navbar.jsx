@@ -1,4 +1,3 @@
-// src/components/Navbar.js
 import React, { useState, useEffect } from 'react'; 
 import { themeColors } from '../styles.js';
 import LightningButton from './LightningButton.jsx';
@@ -7,16 +6,13 @@ export default function Navbar({ currentPage, navigate }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Monitor window width to handle responsiveness
   useEffect(() => {
     const handleResize = () => {
       const mobileView = window.innerWidth <= 768;
       setIsMobile(mobileView);
-      // Close the menu automatically if switching back to desktop
       if (!mobileView) setIsOpen(false);
     };
 
-    // Run on mount to set initial state correctly
     handleResize();
 
     window.addEventListener('resize', handleResize);
@@ -41,9 +37,8 @@ export default function Navbar({ currentPage, navigate }) {
       alignItems: isMobile && isOpen ? 'flex-start' : 'center',
       padding: isMobile ? '15px 20px' : '20px 40px',
 
-      // Dynamically grow the navbar container to encapsulate the dropdown height
       height: isMobile && isOpen ? '100vh' : 'auto',
-      transition: 'height 0.3s ease', // Smooths out the opening/closing transition
+      transition: 'height 0.3s ease', 
     },
     logo: {
       fontSize: '14px',
@@ -53,7 +48,7 @@ export default function Navbar({ currentPage, navigate }) {
       color: '#fff',
       cursor: 'pointer',
     },
-    // Changes layout from horizontal row to an overlay vertical stack on mobile
+
     navLinks: {
       display: isMobile ? (isOpen ? 'flex' : 'none') : 'flex',
       flexDirection: isMobile ? 'column' : 'row',
@@ -78,7 +73,7 @@ export default function Navbar({ currentPage, navigate }) {
       cursor: 'pointer',
       borderBottom: isActive ? '1px solid #fff' : '1px solid transparent',
       paddingBottom: '4px',
-      width: isMobile ? '100%' : 'auto', // full width clickable area on mobile
+      width: isMobile ? '100%' : 'auto', 
       textAlign: isMobile ? 'center' : 'left',
       zIndex: 11,
     }),
@@ -113,7 +108,7 @@ export default function Navbar({ currentPage, navigate }) {
 
   const handleNavigation = (id) => {
     navigate(id);
-    setIsOpen(false); // Auto-close menu when a link is clicked
+    setIsOpen(false); 
   };
 
   return (
@@ -122,7 +117,6 @@ export default function Navbar({ currentPage, navigate }) {
         Aluminum Falcons
       </div>
 
-      {/* Hamburger Icon for Mobile Mobile */}
       <button
         style={styles.hamburger}
         onClick={() => setIsOpen(!isOpen)}
@@ -166,7 +160,6 @@ export default function Navbar({ currentPage, navigate }) {
             {item.label}
           </span>
         ))}
-        {/* Included if LightningButton needs to sit inside or alongside the navigation items */}
         {/* <LightningButton /> */}
       </div>
     </nav>

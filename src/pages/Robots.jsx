@@ -46,11 +46,10 @@ export default function Robots() {
           display: 'flex',
           flexDirection: 'row',
           gap: '50px',
-          flexWrap: 'wrap', // Better for mobile responsiveness
+          flexWrap: 'wrap',
           alignItems: 'flex-start',
         }}
       >
-        {/* Robot Image Section */}
         <div style={{ flex: '1', minWidth: '300px' }}>
           <img
             src={currentRobot.image}
@@ -64,7 +63,6 @@ export default function Robots() {
           />
         </div>
 
-        {/* Specs Section */}
         <div style={{ flex: '1', minWidth: '300px' }}>
           <h2
             style={{

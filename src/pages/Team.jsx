@@ -6,7 +6,6 @@ import HoverCard from '../components/HoverCard.jsx';
 export default function Team() {
   const [selectedYear, setSelectedYear] = useState('DECODE');
 
-  // Coaches data (stays persistent across seasons)
   const coachesData = [
     {
       name: 'Aaron Lockhart',
@@ -20,7 +19,6 @@ export default function Team() {
     },
   ];
 
-  // Added 'image' property to each member object
   const rosterData = {
     DECODE: [
       {
@@ -126,7 +124,6 @@ export default function Team() {
 
   return (
     <section style={globalStyles.section}>
-      {/* Student Roster Section */}
       <div style={globalStyles.sectionTitle}>Crew Roster</div>
 
       <select
@@ -150,7 +147,6 @@ export default function Team() {
         ))}
       </div>
 
-      {/* Coaches & Mentors Section */}
       <div style={{ ...globalStyles.sectionTitle, marginTop: '50px' }}>
         Coaches & Mentors
       </div>

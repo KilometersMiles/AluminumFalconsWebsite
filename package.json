@@ -1,9 +1,9 @@
 {
-  "name": "aluminum-falcons-website",
+  "name": "Aluminum Falcons",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
-  "homepage": "https://kilometersmiles.github.io/AluminumFalconsWebsite",
+  "homepage": "https://www.aluminumfalcons.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

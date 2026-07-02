@@ -8,10 +8,8 @@ import HoverCard from '../components/HoverCard';
 
 export default function FLL({ navigate }) {
   const handleJoinClick = () => {
-    // Navigate to Join page
     navigate('join');
 
-    // Brief timeout to allow the page to load before scrolling
     setTimeout(() => {
       const fllSection = document.getElementById('fll-engagement-zone');
       if (fllSection) {
@@ -39,7 +37,6 @@ export default function FLL({ navigate }) {
 
       <div style={pageStyle}>
         <div style={contentSplit}>
-          {/* Image Container */}
           <div style={{ flex: '1', minWidth: '300px' }}>
             <img
               src="photos/teamPhotos/LegoLeagueTeam2026.JPG"
@@ -53,7 +50,6 @@ export default function FLL({ navigate }) {
             />
           </div>
 
-          {/* Description Text */}
           <div style={{ flex: '1.2', minWidth: '300px' }}>
             {/* <h2
               style={{

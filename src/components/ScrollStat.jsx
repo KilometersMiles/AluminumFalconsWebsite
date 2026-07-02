@@ -32,8 +32,8 @@ const ScrollStat = ({
       decimals={decimals}
       duration={duration}
       separator={separator}
-      enableScrollSpy={true} // Triggers animation on scroll
-      scrollSpyOnce={true} // True = runs once, False = re-runs every time it scrolls into view
+      enableScrollSpy={true}
+      scrollSpyOnce={true}
     >
       {({ countUpRef }) => (
         <span ref={countUpRef} style={statStyle.statNumber} />

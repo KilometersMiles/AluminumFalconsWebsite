@@ -1,4 +1,3 @@
-// src/styles.js
 export const themeColors = {
   bg: '#08080c',
   textMain: '#f5f5f7',
@@ -6,7 +5,7 @@ export const themeColors = {
   textDark: '#71717a',
   accentGlow:
     'radial-gradient(ellipse 60% 80% at top center, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 45%, rgba(0, 0, 0, 0) 70%)',
-  accentActive: '#7dd3fc', // Cyber Sky Blue
+  accentActive: '#7dd3fc',
   border: 'rgba(255, 255, 255, 0.06)',
 };
 
@@ -50,11 +49,11 @@ export const globalStyles = {
     background: 'rgba(255, 255, 255, 0.03)',
     border: `1px solid ${themeColors.border}`,
     padding: '8px 16px',
-    borderRadius: '100px', // Perfect capsule badge
+    borderRadius: '100px',
     width: 'fit-content',
     backdropFilter: 'blur(4px)',
   },
-  // Soft pill button with continuous scaling animation on hover
+
   btn: {
     background: '#fff',
     color: '#000',
@@ -63,20 +62,19 @@ export const globalStyles = {
     fontSize: '13px',
     fontWeight: '600',
     letterSpacing: '-0.01em',
-    borderRadius: '100px', // Completely pill-shaped
+    borderRadius: '100px', 
     cursor: 'pointer',
     transition:
       'transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease, background-color 0.2s ease',
     boxShadow: '0 4px 20px rgba(255, 255, 255, 0.05)',
   },
-  // Pill dropdowns
   dropdown: {
     background: 'rgba(255, 255, 255, 0.02)',
     border: `1px solid ${themeColors.border}`,
     color: '#fff',
     padding: '12px 24px',
     fontSize: '14px',
-    borderRadius: '100px', // Pill select menu
+    borderRadius: '100px', 
     cursor: 'pointer',
     marginBottom: '30px',
     outline: 'none',

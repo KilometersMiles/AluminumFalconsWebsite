@@ -1,4 +1,3 @@
-// src/components/PlasmaButton.js
 import React, { useState, useEffect } from 'react';
 import { themeColors } from '../styles';
 import { isMobile, MobileView, BrowserView } from 'react-device-detect';
@@ -6,7 +5,6 @@ import { isMobile, MobileView, BrowserView } from 'react-device-detect';
 export default function LightningButton({ children, onClick, style, color }) {
   const [isHovered, setIsHovered] = useState(false);
 
-  // Unique ID for the filter so multiple buttons on the same page don't clash
   const filterId = 'plasma-glow-' + Math.random().toString(36).substr(2, 9);
   const electricBlue = color != null ? color : '#7dd3fc';
 
@@ -21,7 +19,7 @@ export default function LightningButton({ children, onClick, style, color }) {
     }`,
     backdropFilter: 'blur(8px)',
     padding: '12px 32px',
-    borderRadius: '100px', // Keeps your sharp, clean-cut geometry aesthetic
+    borderRadius: '100px',
     color: isHovered || isMobile ? electricBlue : '#fff',
     cursor: 'pointer',
     textTransform: 'uppercase',
@@ -29,9 +27,9 @@ export default function LightningButton({ children, onClick, style, color }) {
     fontSize: '12px',
     letterSpacing: '2px',
     outline: 'none',
-    overflow: 'visible', // Essential so the plasma arcs can break outside the bounding box
+    overflow: 'visible',
     transition: 'all 0.3s ease',
-    ...style, // Allows overriding structural styles if needed
+    ...style, 
   };
 
   const lightningLayerStyle = {
@@ -49,7 +47,6 @@ export default function LightningButton({ children, onClick, style, color }) {
 
   return (
     <>
-      {/* Dynamic SVG Distortion Filter */}
       <svg
         style={{
           position: 'absolute',
