@@ -1,6 +1,5 @@
 // src/pages/FLL.js
-import React, { useEffect, useContext, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 import { globalStyles, themeColors } from '../styles';
 import LightningButton from '../components/LightningButton';
 import LightningText from '../components/LightningText';
@@ -8,7 +7,7 @@ import HoverCard from '../components/HoverCard';
 
 export default function FLL({ navigate }) {
   const handleJoinClick = () => {
-    navigate('join');
+    navigate('/join');
 
     setTimeout(() => {
       const fllSection = document.getElementById('fll-engagement-zone');

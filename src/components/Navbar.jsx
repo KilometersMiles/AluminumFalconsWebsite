@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'; 
 import { themeColors } from '../styles.js';
-import LightningButton from './LightningButton.jsx';
 
 export default function Navbar({ currentPage, navigate }) {
   const [isMobile, setIsMobile] = useState(false);
@@ -98,22 +97,22 @@ export default function Navbar({ currentPage, navigate }) {
   };
 
   const menuItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'team', label: 'Team' },
-    { id: 'robots', label: 'Robots' },
-    { id: 'history', label: 'History' },
-    { id: 'fll', label: 'FLL' },
-    { id: 'join', label: 'Join' },
+    { id: 'home', path: '/', label: 'Home' },
+    { id: 'team', path: '/team', label: 'Team' },
+    { id: 'robots', path: '/robots', label: 'Robots' },
+    { id: 'history', path: '/history', label: 'History' },
+    { id: 'fll', path: '/fll', label: 'FLL' },
+    { id: 'join', path: '/join', label: 'Join' },
   ];
 
-  const handleNavigation = (id) => {
-    navigate(id);
+  const handleNavigation = (path) => {
+    navigate(path);
     setIsOpen(false); 
   };
 
   return (
     <nav style={styles.navbar}>
-      <div style={styles.logo} onClick={() => handleNavigation('home')}>
+      <div style={styles.logo} onClick={() => handleNavigation('/')}>
         Aluminum Falcons
       </div>
 
@@ -148,7 +147,7 @@ export default function Navbar({ currentPage, navigate }) {
           <span
             key={item.id}
             style={styles.navLink(currentPage === item.id)}
-            onClick={() => handleNavigation(item.id)}
+            onClick={() => handleNavigation(item.path)}
             onMouseEnter={(e) => {
               if (currentPage !== item.id) e.target.style.color = '#7dd3fc';
             }}

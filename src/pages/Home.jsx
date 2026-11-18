@@ -276,7 +276,7 @@ export default function Home({ navigate }) {
         <h1 style={pageStyles.heroTitle}>ALUMINUM FALCONS</h1>
         <p style={pageStyles.heroSubtitle}>FTC Robotics Team</p>
         <LightningButton
-          onClick={() => navigate('join')}
+          onClick={() => navigate('/join')}
           onMouseEnter={(e) => {
             e.target.style.background = '#000';
             e.target.style.color = '#fff';

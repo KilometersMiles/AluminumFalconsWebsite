@@ -1,6 +1,7 @@
 // src/App.js
 import React, { useState, useEffect, useMemo } from 'react';
-import { globalStyles, themeColors } from './styles';
+import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { globalStyles } from './styles';
 import './style.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -16,10 +17,10 @@ import Hyperspace from './components/Hyperspace';
 
 export default function App() {
   const [hasJumped, setHasJumped] = useState(false);
-  const [currentPage, setCurrentPage] = useState('home');
-  const [displayedPage, setDisplayedPage] = useState('home'); 
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const location = useLocation();
+  const routerNavigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -27,36 +28,16 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navigateWithTransition = (nextPage) => {
-    if (nextPage === currentPage) return;
+  const navigateWithTransition = (nextPath) => {
+    if (nextPath === location.pathname) return;
 
-    setIsTransitioning(true); 
-    setCurrentPage(nextPage);
+    setIsTransitioning(true);
 
     setTimeout(() => {
-      setDisplayedPage(nextPage);
+      routerNavigate(nextPath);
       window.scrollTo(0, 0);
-      setIsTransitioning(false); 
+      setIsTransitioning(false);
     }, 300);
-  };
-
-  const renderPage = () => {
-    switch (displayedPage) {
-      case 'home':
-        return <Home navigate={navigateWithTransition} />;
-      case 'team':
-        return <Team />;
-      case 'robots':
-        return <Robots />;
-      case 'history':
-        return <History />;
-      case 'fll':
-        return <FLL navigate={navigateWithTransition} />;
-      case 'join':
-        return <Join />;
-      default:
-        return <Home navigate={navigateWithTransition} />;
-    }
   };
 
   const randomStarfieldBackground = useMemo(() => {
@@ -108,7 +89,10 @@ export default function App() {
       <div style={globalStyles.glowEffect} />
       <div style={starFieldStyle} />
 
-      <Navbar currentPage={currentPage} navigate={navigateWithTransition} />
+      <Navbar
+        currentPage={location.pathname === '/' ? 'home' : location.pathname.slice(1)}
+        navigate={navigateWithTransition}
+      />
 
       <main
         style={{
@@ -117,7 +101,17 @@ export default function App() {
           zIndex: 2,
         }}
       >
-        <div style={pageTransitionStyle}>{renderPage()}</div>
+        <div style={pageTransitionStyle}>
+          <Routes>
+            <Route path="/" element={<Home navigate={navigateWithTransition} />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/robots" element={<Robots />} />
+            <Route path="/history" element={<History />} />
+            <Route path="/fll" element={<FLL navigate={navigateWithTransition} />} />
+            <Route path="/join" element={<Join />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </div>
       </main>
 
       <Footer />
