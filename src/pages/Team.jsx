@@ -20,6 +20,43 @@ export default function Team() {
   ];
 
   const rosterData = {
+      BIOBUZZ: [
+      {
+        name: 'Miles Higginson',
+        role: 'Lead Software',
+        image: 'photos/teamPhotos/Miles.jpg',
+      },
+      {
+        name: 'Ryan Davis',
+        role: 'Lead Mechanical',
+        image: 'photos/teamPhotos/Ryan.jpg',
+      },
+      {
+        name: 'Ethan Lockhart',
+        role: 'CAD & Outreach',
+        image: 'photos/teamPhotos/Ethan.jpg',
+      },
+      {
+        name: 'Johnny Crofts',
+        role: 'Outreach Lead',
+        image: 'photos/teamPhotos/Johnny.jpg',
+      },
+      {
+        name: 'Lewis Higginson',
+        role: 'Build Team & Portfolio',
+        image: 'photos/teamPhotos/Lewis.jpg',
+      },
+      {
+        name: 'Anna Auman',
+        role: 'Outreach & Pit',
+        image: 'photos/teamPhotos/Anna.jpg',
+      },
+      {
+        name: 'Sean Olson',
+        role: 'Programming & Build Team',
+        image: 'photos/teamPhotos/Sean.jpeg',
+      },
+    ],
     DECODE: [
       {
         name: 'Miles Higginson',
@@ -35,6 +72,11 @@ export default function Team() {
         name: 'Ethan Lockhart',
         role: 'CAD & Outreach',
         image: 'photos/teamPhotos/Ethan.jpg',
+      },
+      {
+        name: 'Johnny Crofts',
+        role: 'Outreach Lead',
+        image: 'photos/teamPhotos/Johnny.jpg',
       },
       {
         name: 'Lewis Higginson',
@@ -131,6 +173,7 @@ export default function Team() {
         onChange={(e) => setSelectedYear(e.target.value)}
         style={globalStyles.dropdown}
       >
+        <option value="BIOBUZZ">BIOBUZZ</option>
         <option value="DECODE">DECODE</option>
         <option value="INDEEP">INTO THE DEEP</option>
         <option value="STAGE">CENTERSTAGE</option>
