@@ -10,5 +10,24 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      (function (location) {
+        var redirect = location.search[1] === '/';
+        if (redirect) {
+          var route = location.search
+            .slice(1)
+            .split('&')
+            .map(function (value) {
+              return value.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(
+            null,
+            null,
+            route + location.hash
+          );
+        }
+      })(window.location);
+    </script>
   </body>
 </html>
